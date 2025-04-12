@@ -38,12 +38,6 @@ const config = {
     ]
 };
 const __TURBOPACK__default__export__ = config;
- // const config = {
- //   plugins: {
- //     "tailwindcss/postcss" : {},
- //   },
- // }
- // export default config;
 }}),
 "[project]/postcss.config.mjs/transform.ts { CONFIG => \"[project]/postcss.config.mjs [postcss] (ecmascript)\" } [postcss] (ecmascript)": ((__turbopack_context__) => {
 "use strict";

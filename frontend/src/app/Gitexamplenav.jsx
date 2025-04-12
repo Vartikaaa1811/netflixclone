@@ -7,9 +7,6 @@ const Gitexamplenav = () => {
       <h2>hello baby two</h2>
       <h2>hello baby three</h2>
       <h2>hello baby three plus one</h2>
-      <h2>hello baby three plus one</h2>
-      <h2>hello baby three plus one</h2>
-      <h2>hello baby three plus one</h2>
     </div>
   );
 };
