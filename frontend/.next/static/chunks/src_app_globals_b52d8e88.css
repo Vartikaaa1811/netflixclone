@@ -7,11 +7,15 @@
     --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --color-red-400: oklch(70.4% .191 22.216);
+    --color-red-500: oklch(63.7% .237 25.331);
     --color-red-600: oklch(57.7% .245 27.325);
     --color-red-700: oklch(50.5% .213 27.518);
     --color-gray-300: oklch(87.2% .01 258.338);
+    --color-gray-400: oklch(70.7% .022 261.325);
     --color-gray-500: oklch(55.1% .027 264.364);
+    --color-gray-600: oklch(44.6% .03 256.802);
     --color-gray-700: oklch(37.3% .034 259.733);
+    --color-gray-800: oklch(27.8% .033 256.848);
     --color-zinc-900: oklch(21% .006 285.885);
     --color-black: #000;
     --color-white: #fff;
@@ -21,8 +25,6 @@
     --text-sm--line-height: calc(1.25 / .875);
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
-    --text-xl: 1.25rem;
-    --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
@@ -36,6 +38,7 @@
     --font-weight-extrabold: 800;
     --radius-xl: .75rem;
     --radius-2xl: 1rem;
+    --radius-4xl: 2rem;
     --default-transition-duration: .15s;
     --default-transition-timing-function: cubic-bezier(.4, 0, .2, 1);
     --default-font-family: var(--font-sans);
@@ -231,6 +234,10 @@
     position: absolute;
   }
 
+  .fixed {
+    position: fixed;
+  }
+
   .relative {
     position: relative;
   }
@@ -251,20 +258,12 @@
     right: calc(var(--spacing) * 8);
   }
 
-  .right-12 {
-    right: calc(var(--spacing) * 12);
-  }
-
   .bottom-0 {
     bottom: calc(var(--spacing) * 0);
   }
 
   .bottom-4 {
     bottom: calc(var(--spacing) * 4);
-  }
-
-  .bottom-8 {
-    bottom: calc(var(--spacing) * 8);
   }
 
   .left-0 {
@@ -277,6 +276,10 @@
 
   .z-10 {
     z-index: 10;
+  }
+
+  .my-8 {
+    margin-block: calc(var(--spacing) * 8);
   }
 
   .mt-4 {
@@ -299,6 +302,10 @@
     margin-bottom: calc(var(--spacing) * 10);
   }
 
+  .block {
+    display: block;
+  }
+
   .flex {
     display: flex;
   }
@@ -307,12 +314,20 @@
     display: grid;
   }
 
+  .inline {
+    display: inline;
+  }
+
   .h-full {
     height: 100%;
   }
 
   .h-screen {
     height: 100vh;
+  }
+
+  .w-3\/4 {
+    width: 75%;
   }
 
   .w-full {
@@ -325,6 +340,10 @@
 
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .flex-col {
@@ -363,6 +382,10 @@
     border-radius: var(--radius-2xl);
   }
 
+  .rounded-4xl {
+    border-radius: var(--radius-4xl);
+  }
+
   .rounded-xl {
     border-radius: var(--radius-xl);
   }
@@ -382,10 +405,6 @@
     border-bottom-width: 1px;
   }
 
-  .border-black {
-    border-color: var(--color-black);
-  }
-
   .border-gray-300 {
     border-color: var(--color-gray-300);
   }
@@ -394,8 +413,16 @@
     border-color: var(--color-gray-500);
   }
 
+  .border-gray-600 {
+    border-color: var(--color-gray-600);
+  }
+
   .border-gray-700 {
     border-color: var(--color-gray-700);
+  }
+
+  .border-gray-800 {
+    border-color: var(--color-gray-800);
   }
 
   .bg-black {
@@ -404,6 +431,10 @@
 
   .bg-red-400 {
     background-color: var(--color-red-400);
+  }
+
+  .bg-red-500 {
+    background-color: var(--color-red-500);
   }
 
   .bg-red-600 {
@@ -475,11 +506,6 @@
     line-height: var(--tw-leading, var(--text-sm--line-height));
   }
 
-  .text-xl {
-    font-size: var(--text-xl);
-    line-height: var(--tw-leading, var(--text-xl--line-height));
-  }
-
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
@@ -519,6 +545,18 @@
   }
 
   @media (hover: hover) {
+    .hover\:bg-gray-400:hover {
+      background-color: var(--color-gray-400);
+    }
+  }
+
+  @media (hover: hover) {
+    .hover\:bg-gray-600:hover {
+      background-color: var(--color-gray-600);
+    }
+  }
+
+  @media (hover: hover) {
     .hover\:bg-red-700:hover {
       background-color: var(--color-red-700);
     }
@@ -539,6 +577,12 @@
   @media (width >= 48rem) {
     .md\:grid-cols-2 {
       grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (width >= 48rem) {
+    .md\:grid-cols-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
 

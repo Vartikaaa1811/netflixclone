@@ -1,11 +1,12 @@
 // this will be the main landing page, like localhost:3000
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Form from "next/form";
 import Image from "next/image";
 
-
-
 const page = () => {
+  const [showText, setShowText] = useState(true);
+
   return (
     <>
       <div className="relative h-screen w-full ">
@@ -42,114 +43,232 @@ const page = () => {
             Ready to watch? Enter your email to create or restart your
             membership.
           </p>
-          <Form
-            className="flex flex-col sm:flex-row items-center w-full max-w-xl gap-4 border border-gray-300 rounded-2xl overflow-hidden mt-4"  
-          >
+          <Form className="flex flex-col sm:flex-row items-center w-full max-w-xl gap-4 border border-gray-300 rounded-2xl overflow-hidden mt-4">
             <input
               type="email"
               placeholder="Email address"
               className=" w-full px-4 py-3 rounded text-black outline-none"
               required
             />
-            <button className="bg-red-600 hover:bg-red-700 transition px-6 py-3 text-white font-semibold rounded w-full sm:w-auto" type="submit">
-              Get Started 
+            <button
+              className="bg-red-500 hover:bg-red-700 transition px-6 py-3 text-white font-semibold rounded w-full sm:w-auto"
+              type="submit"
+            >
+              Get Started {">"}
             </button>
           </Form>
         </div>
       </div>
 
+      <div>
+        <h2> trending movies api thing</h2>
+      </div>
 
+      <div className=" bg-black text-white px-6 py-12 ">
+        <h2 className="text-3xl font-bold  mb-10">More reasons to join</h2>
 
-      
-        <div>
-          <h2> trending movies api thing</h2>
-        </div>
-
-
-
-
-        <div className=" bg-black text-white px-6 py-12 ">
-          <h2 className="text-3xl font-bold  mb-10">More reasons to join</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 ">
-
-
-            <div className="relative border-2 border-gray-700 rounded-xl p-6 bg-zinc-900">
-              <h2 className="text-2xl font-bold mb-2 ">Enjoy on your TV</h2>
-              <p className="text-sm text-gray-300">
-                Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV,
-                Blu-ray players and more.
-              </p>
-              <div className="flex justify-end bottom-0 right-8">
-              <Image src = "/images/TV.jpg" alt="tv" width={60} height={60}/>
-              </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 ">
+          <div className="relative border-2 border-gray-700 rounded-xl p-6 bg-zinc-900">
+            <h2 className="text-2xl font-bold mb-2 ">Enjoy on your TV</h2>
+            <p className="text-sm text-gray-300">
+              Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV,
+              Blu-ray players and more.
+            </p>
+            <div className="flex justify-end bottom-0 right-8">
+              <Image src="/images/TV.jpg" alt="tv" width={60} height={60} />
             </div>
+          </div>
 
-
-            <div className="relative border-2 border-gray-700 rounded-xl p-6 bg-zinc-900">
-            <h3 className="text-2xl font-bold mb-2">Download to watch offline</h3>
-              <p className="text-sm text-gray-300">
-                Save your favourites easily and always have something to watch.
-              </p>
-              <div className="flex justify-end bottom-4 right-4">
-              <Image src = "/images/Download.jpg" alt="offline"  width={60} height={60} />
-              </div>
+          <div className="relative border-2 border-gray-700 rounded-xl p-6 bg-zinc-900">
+            <h3 className="text-2xl font-bold mb-2">
+              Download to watch offline
+            </h3>
+            <p className="text-sm text-gray-300">
+              Save your favourites easily and always have something to watch.
+            </p>
+            <div className="flex justify-end bottom-4 right-4">
+              <Image
+                src="/images/Download.jpg"
+                alt="offline"
+                width={60}
+                height={60}
+              />
             </div>
+          </div>
 
-            <div className="relative border-2 border-gray-700 rounded-xl p-6 bg-zinc-900">
+          <div className="relative border-2 border-gray-700 rounded-xl p-6 bg-zinc-900">
             <h3 className="text-2xl font-bold mb-2">Watch everywhere</h3>
             <p className="text-sm text-gray-300">
-              Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV without paying more.
+              Stream unlimited movies and TV shows on your phone, tablet,
+              laptop, and TV without paying more.
             </p>
             <div className="flex justify-end bottom-4 right-4">
-              <Image src = "/images/Watch.jpg" alt="tv"   width={60} height={60} />
+              <Image src="/images/Watch.jpg" alt="tv" width={60} height={60} />
             </div>
-            </div>
+          </div>
 
-
-            <div className="relative border-2 border-gray-700 rounded-xl p-6 bg-zinc-900">
-            <h3 className="text-2xl font-bold mb-2">Create profiles for kids</h3>
+          <div className="relative border-2 border-gray-700 rounded-xl p-6 bg-zinc-900">
+            <h3 className="text-2xl font-bold mb-2">
+              Create profiles for kids
+            </h3>
             <p className="text-sm text-gray-300">
-              Send kids on adventures with their favourite characters in a space made just for them—free with your membership.
+              Send kids on adventures with their favourite characters in a space
+              made just for them—free with your membership.
             </p>
             <div className="flex justify-end bottom-4 right-4">
-              <Image src = "/images/profile.jpg" alt="tv"  width={60} height={60} />
-              </div>
+              <Image
+                src="/images/profile.jpg"
+                alt="tv"
+                width={60}
+                height={60}
+              />
             </div>
-
-
           </div>
         </div>
+      </div>
 
-        <div className="bg-black text-white px-6 py-12">
-          <div className="text-3xl font-bold  mb-10" >Frequently Asked Questions</div>
-          <div className="flex flex-col gap-4 font-bold ">
+      <div className="bg-black text-white px-6 py-12">
+        <div className="text-3xl font-bold  mb-10">
+          Frequently Asked Questions
+        </div>
+        <div className="flex flex-col gap-4 font-bold ">
+          <div className="border px-2 py-2 bg-grey-400 rounded border-gray-800 hover:bg-gray-400">
+            <button onClick={() => setShowText(!showText)}>
+              {" "}
+              {showText ? "Hide" : "Show"}{" "}
+              <p className="inline">What is Netflix +</p>
+            </button>
 
-            <div className="border px-2 py-2 bg-grey-400 rounded border-gray-500">What is Netflix?</div>
+            {showText && (
+              <p className="border px-2 py-2 bg-grey-400 rounded border-gray-800 hover:bg-gray-600">
+                Netflix is a streaming service that offers a wide variety of
+                award-winning TV shows, movies, anime, documentaries and more on
+                thousands of internet-connected devices. You can watch as much
+                as you want, whenever you want without a single ad all for one
+                low monthly price. There's always something new to discover and
+                new TV shows and movies are added every week!{" "}
+              </p>
+            )}
+          </div>
 
+          <div className="border px-2 py-2 rounded border-gray-500">
+            How much does Netflix cost?
+            <p className="border px-2 py-2 bg-grey-400 rounded border-gray-800 hover:bg-gray-600">
+              Watch Netflix on your smartphone, tablet, Smart TV, laptop, or
+              streaming device, all for one fixed monthly fee. Plans range from
+              USD 8.99 to USD 16.99 a month. No extra costs, no contracts.
+            </p>
+          </div>
 
+          <div className="border px-2 py-2 rounded border-gray-500">
+            Where can I watch?
+            <p className="border px-2 py-2 bg-grey-400 rounded border-gray-800 hover:bg-gray-600">
+              Watch anywhere, anytime. Sign in with your Netflix account to
+              watch instantly on the web at netflix.com from your personal
+              computer or on any internet-connected device that offers the
+              Netflix app, including smart TVs, smartphones, tablets, streaming
+              media players and game consoles. You can also download your
+              favourite shows with the iOS, Android, or Windows 10 app. Use
+              downloads to watch while you're on the go and without an internet
+              connection. Take Netflix with you anywhere.
+            </p>
+          </div>
 
-            <div  className="border px-2 py-2 rounded border-gray-500">How much does Netflix cost?</div>
-            <div className="border px-2 py-2 rounded border-gray-500">Where can I watch?</div>
-            <div className="border px-2 py-2 rounded border-gray-500">How do I cancel?</div>
-            <div className="border px-2 py-2 rounded border-gray-500">What can I watch on Netflix?</div>
-            <div className="border px-2 py-2 rounded border-gray-500">Is Netflix good for kids?</div>  
+          <div className="border px-2 py-2 rounded border-gray-500">
+            How do I cancel?
+            <p className="border px-2 py-2 bg-grey-400 rounded border-gray-800 hover:bg-gray-600">
+              {" "}
+              Netflix is flexible. There are no pesky contracts and no
+              commitments. You can easily cancel your account online in two
+              clicks. There are no cancellation fees - start or stop your
+              account anytime.
+            </p>
+          </div>
+          <div className="border px-2 py-2 rounded border-gray-500">
+            What can I watch on Netflix?
+            <p className="border px-2 py-2 bg-grey-400 rounded border-gray-800 hover:bg-gray-600">
+              {" "}
+              Netflix has an extensive library of feature films, documentaries,
+              TV shows, anime, award-winning Netflix originals, and more. Watch
+              as much as you want, anytime you want.
+            </p>
+          </div>
+          <div className="border px-2 py-2 rounded border-gray-500">
+            Is Netflix good for kids?
+            <p className="border px-2 py-2 bg-grey-400 rounded border-gray-800 hover:bg-gray-600">
+              The Netflix Kids experience is included in your membership to give
+              parents control while kids enjoy family-friendly TV shows and
+              movies in their own space. Kids profiles come with PIN-protected
+              parental controls that let you restrict the maturity rating of
+              content kids can watch and block specific titles you don't want
+              kids to see.
+            </p>
           </div>
         </div>
-      
+      </div>
+
+      <div className=" bg-black w-full h-full flex flex-col items-center justify-center text-white px-4 text-center">
+        <p className="text-lg">
+          Ready to watch? Enter your email to create or restart your membership.
+        </p>
+        <Form className="flex flex-col sm:flex-row text-white items-center  w-3/4 gap-4 border border-gray-300 rounded-4xl overflow-hidden mt-4">
+          <input
+            type="email"
+            placeholder="Email address"
+            className=" w-full px-4 py-3 rounded text-white outline-none"
+            required
+          />
+          <button
+            className="bg-red-600 hover:bg-red-700 transition px-6 py-3 text-white font-semibold rounded w-full sm:w-auto"
+            type="submit"
+          >
+            Get Started {">"}
+          </button>
+        </Form>
+        <hr className="my-8 border-b border-gray-600 w-full" />
+      </div>
+
+      <div className=" grid grid-cols-2 md:grid-cols-4 gap-4 bg-black text-white">
+        <div>
+          <h2>HOME</h2>
+          <span>Services</span>
+          <span>Products</span>
+          <span>About Us</span>
+          <span>Pricing</span>
+          <span>Partners New</span>
+        </div>
+        <div>
+          <h2>RESOURCES</h2>
+          <span>Documentation</span>
+          <span>Tutorials</span>
+          <span>Support New</span>
+        </div>
+        <div>
+          <h2>PRODUCTS</h2>
+          <span>Our Products</span>
+          <span>Great Deals New</span>
+          <span>Analytics</span>
+          <span>Mobile</span>
+        </div>
+        <div>
+          <h2>SUPPORT</h2>
+          <span>Help Center</span>
+          <span>Privacy Policy</span>
+          <span>Conditions</span>
+        </div>
+        <div>
+          <h2>CONTACT US</h2>
+          <span>+91 9305904328</span>
+          <span>Punjab</span>
+          <span>vrtikaaa1811@gmail.com</span>
+        </div>
+        <hr className="my-8 border-b border-gray-600 w-full " />
+        <p>
+          Copyright 2024. All Rights Reserved. <p></p>
+        </p>
+      </div>
     </>
   );
 };
 
 export default page;
-
-
-
-
-
-
-
-
-
-
-
