@@ -10,7 +10,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body      >
+      <head> 
+        <link rel="icon" href="/images/netflix-icon.png" />
+        </head>
+      <body>
         {children}
       </body>
     </html>
