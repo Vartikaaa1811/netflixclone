@@ -64,10 +64,49 @@ const page = () => {
         <h2> trending movies api thing</h2>
       </div>
 
-      <div className=" bg-black text-white px-6 py-12 ">
-        <h2 className="text-3xl font-bold  mb-10">More reasons to join</h2>
+      <div className="text-white bg-black px-12 py-12 ">
+        <h2 className="text-3xl mb-5 max-w-7xl mx-auto">
+          A plan to suit your needs
+        </h2>
+        <div className="grid grid-col-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+          <div className=" relative border-2 border-gray-600 rounded-xl p-6 bg-zinc-900 flex flex-col justify-between transition-transform duration-300  hover:scale-105">
+            <h1 className="text-xl font-bold p-2">Mobile</h1>
+            <h2 className="text-gray-400 text-lg font-bold p-1">480p</h2>
+            <p className="">✔️ Fair video quality</p>
+            <p className="">✔️ For your phone or tablet</p>
+            <h2 className="text-lg font-bold mt-6">₹149 /mo</h2>
+          </div>
+          <div className=" relative border-2 border-gray-600 rounded-xl p-6 bg-zinc-900 flex flex-col justify-between transition-transform duration-300  hover:scale-105">
+            <h1 className="text-xl font-bold p-2">Basic</h1>
+            <h2 className="text-gray-400 text-lg font-bold p-1">720p</h2>
+            <p className="">✔️ Good video quality</p>
+            <p className="">✔️ For your phone, tablet, laptop and TV</p>
+            <h2 className="text-lg font-bold mt-6">₹199 /mo</h2>
+          </div>
+          <div className=" relative border-2 border-gray-600 rounded-xl p-6 bg-zinc-900 flex flex-col justify-between transition-transform duration-300  hover:scale-105">
+            <h1 className="text-xl font-bold p-2">Standard</h1>
+            <h2 className="text-gray-400 text-lg font-bold p-1">1080p</h2>
+            <p className="">✔️ Great video quality </p>
+            <p className="">✔️ For your phone, tablet, laptop and TV</p>
+            <h2 className="text-lg font-bold mt-6">₹499 /mo</h2>
+          </div>
+          <div className=" relative border-2 border-gray-600 rounded-xl p-6 bg-zinc-900 flex flex-col justify-between transition-transform duration-300  hover:scale-105">
+            <h1 className="text-xl font-bold p-2">Premium</h1>
+            <h2 className="text-gray-400 text-lg font-bold p-1">4K + HDR</h2>
+            <p className="">✔️ Best video quality </p>
+            <p className="">✔️ Immersive sound (spatial audio) </p>
+            <p className="">✔️ For your phone, tablet, laptop and TV</p>
+            <h2 className="text-lg font-bold mt-6">₹649 /mo</h2>
+          </div>
+        </div>
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 ">
+      <div className=" bg-black text-white px-6 py-12 ">
+        <h2 className="text-3xl font-bold  mb-5 max-w-7xl mx-auto">
+          More reasons to join
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
           <div className="relative border-2 border-gray-700 rounded-xl p-6 bg-zinc-900">
             <h2 className="text-2xl font-bold mb-2 ">Enjoy on your TV</h2>
             <p className="text-sm text-gray-300">
@@ -228,44 +267,69 @@ const page = () => {
         <hr className="my-8 border-b border-gray-600 w-full" />
       </div>
 
-      <div className=" grid grid-cols-2 md:grid-cols-4 gap-4 bg-black text-white">
-        <div>
-          <h2>HOME</h2>
-          <span>Services</span>
-          <span>Products</span>
-          <span>About Us</span>
-          <span>Pricing</span>
-          <span>Partners New</span>
+      <div className="px-8 py-10 bg-black text-white">
+        <div className=" grid grid-cols-2 md:grid-cols-5 gap-5 max-w-7xl mx-auto ">
+          <div className=" flex flex-col bg-black text-white">
+            <h2 className="font-bold text-lg text-gray-600 mb-2 hover:text-2xl hover:underline">
+              HOME
+            </h2>
+            <span>Services</span>
+            <span>Products</span>
+            <span>About Us</span>
+            <span>Pricing</span>
+            <span>Partners New</span>
+          </div>
+          <div className=" flex flex-col bg-black text-white">
+            <h2 className="font-bold text-lg text-gray-600 mb-2 hover:text-2xl hover:underline">
+              RESOURCES
+            </h2>
+            <span>Documentation</span>
+            <span>Tutorials</span>
+            <span>Support New</span>
+          </div>
+          <div className=" flex flex-col bg-black text-white">
+            <h2 className="font-bold text-lg text-gray-600 mb-2 hover:text-2xl hover:underline">
+              PRODUCTS
+            </h2>
+            <span>Our Products</span>
+            <span>Great Deals New</span>
+            <span>Analytics</span>
+            <span>Mobile</span>
+          </div>
+          <div className=" flex flex-col bg-black text-white">
+            <h2 className="font-bold text-lg mb-2 text-gray-600 hover:text-2xl hover:underline">
+              SUPPORT
+            </h2>
+            <span>Help Center</span>
+            <span>Privacy Policy</span>
+            <span>Conditions</span>
+          </div>
+          <div className=" flex flex-col bg-black  text-white">
+            <h2 className="font-bold text-lg text-gray-600 mb-2 hover:text-2xl hover:underline">
+              CONTACT US
+            </h2>
+            <span>+91 9305904328</span>
+            <span>Punjab</span>
+            <span>vrtikaaa1811@gmail.com</span>
+          </div>
         </div>
-        <div>
-          <h2>RESOURCES</h2>
-          <span>Documentation</span>
-          <span>Tutorials</span>
-          <span>Support New</span>
+
+        <hr className="my-8 border-b border-gray-600 w-full max-w-7xl mx-auto" />
+
+        <div className="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto text-sm">
+          <p className="text-left">Copyright 2024. All Rights Reserved.</p>
+          <Image
+            src="/images/socialicons.jpg"
+            className="mt-4 md:mt-0"
+            alt="socialicons"
+            width={120}
+            height={120}
+          />
         </div>
-        <div>
-          <h2>PRODUCTS</h2>
-          <span>Our Products</span>
-          <span>Great Deals New</span>
-          <span>Analytics</span>
-          <span>Mobile</span>
-        </div>
-        <div>
-          <h2>SUPPORT</h2>
-          <span>Help Center</span>
-          <span>Privacy Policy</span>
-          <span>Conditions</span>
-        </div>
-        <div>
-          <h2>CONTACT US</h2>
-          <span>+91 9305904328</span>
-          <span>Punjab</span>
-          <span>vrtikaaa1811@gmail.com</span>
-        </div>
-        <hr className="my-8 border-b border-gray-600 w-full " />
-        <p>
-          Copyright 2024. All Rights Reserved. <p></p>
-        </p>
+      </div>
+
+      <div className=" place-items-center text-white bg-gray-600">
+        <p>Made by Vartika :) with NextJs.</p>
       </div>
     </>
   );
