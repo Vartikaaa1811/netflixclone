@@ -166,26 +166,25 @@ const page = () => {
         </div>
       </div>
 
-      <div className="bg-black text-white px-6 py-12">
-        <div className="text-3xl font-bold  mb-10">
+      <div className="bg-black text-white px-6 py-12 ">
+        <div className="text-3xl font-bold  mb-10 max-w-7xl mx-auto">
           Frequently Asked Questions
         </div>
-        <div className="flex flex-col gap-4 font-bold ">
-          <div className="border px-2 py-2 bg-grey-400 rounded border-gray-800 hover:bg-gray-400">
+        <div className="flex flex-col gap-4 font-bold max-w-7xl mx-auto">
+          <div className="border px-2 py-2 bg-black-400 rounded border-gray-800 ">
             <button onClick={() => setShowText(!showText)}>
-              {" "}
-              {showText ? "Hide" : "Show"}{" "}
-              <p className="inline">What is Netflix +</p>
+              <p className="inline p-4">What is Netflix? </p>
+              {showText ? "+" : "-"}
             </button>
 
             {showText && (
-              <p className="border px-2 py-2 bg-grey-400 rounded border-gray-800 hover:bg-gray-600">
+              <p className="border px-2 py-2 text-sm font-normal bg-grey-400 rounded border-gray-800 ">
                 Netflix is a streaming service that offers a wide variety of
                 award-winning TV shows, movies, anime, documentaries and more on
                 thousands of internet-connected devices. You can watch as much
                 as you want, whenever you want without a single ad all for one
                 low monthly price. There's always something new to discover and
-                new TV shows and movies are added every week!{" "}
+                new TV shows and movies are added every week!
               </p>
             )}
           </div>
