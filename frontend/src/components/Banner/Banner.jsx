@@ -17,7 +17,7 @@ export default function Banner() {
         ]
       );
       return Data;
-    }
+    } 
     fetchData();
   }, []);
 
