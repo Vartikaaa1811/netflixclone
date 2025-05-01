@@ -1,8 +1,8 @@
 // this will be the main landing page, like localhost:3000
 "use client";
 import React, { useState } from "react";
-import Form from "next/form";
-import Image from "next/image";
+// import Form from "next/form";
+// import Image from "next/image";
 
 const page = () => {
   const [showText, setShowText] = useState(true);
