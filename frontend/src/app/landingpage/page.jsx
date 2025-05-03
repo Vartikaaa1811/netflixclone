@@ -1,8 +1,10 @@
 // this will be the main landing page, like localhost:3000
 "use client";
 import React, { useState } from "react";
-// import Form from "next/form";
-// import Image from "next/image";
+import Form from "next/form";
+import Image from "next/image";
+import Rowapi from "../../components/Rowapi/Rowapi";
+import requests from "../../app/lib/requests";
 
 const page = () => {
   const [showText, setShowText] = useState(true);
@@ -60,8 +62,13 @@ const page = () => {
         </div>
       </div>
 
-      <div>
-        <h2> trending movies api thing</h2>
+      <div className="text-white bg-black px-12 py-12">
+        {/* <h2 className="text-3xl mb-5 max-w-7xl mx-auto">Trending Now</h2> */}
+        <Rowapi
+          title="Trending Now"
+          fetchUrl={requests.fetchNetflixovieOriginals}
+          isLargeRow
+        />
       </div>
 
       <div className="text-white bg-black px-12 py-12 ">
@@ -303,7 +310,7 @@ const page = () => {
             <span>Privacy Policy</span>
             <span>Conditions</span>
           </div>
-          <div className=" flex flex-col bg-black  text-white">
+          <div className=" flex flex-col bg-black text-white">
             <h2 className="font-bold text-lg text-gray-600 mb-2 hover:text-2xl hover:underline">
               CONTACT US
             </h2>
