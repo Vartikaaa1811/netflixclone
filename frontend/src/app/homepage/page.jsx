@@ -4,6 +4,7 @@ import React from "react";
 import requests from "../../app/lib/requests";
 import Banner from "../../components/Banner/Banner";
 import Rowapi from "../../components/Rowapi/Rowapi";
+import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 
 
@@ -11,6 +12,7 @@ export default function page() {
   return (
     <>
       <div className="bg-gray-950">
+        <Navbar />
         <Banner />
         <Rowapi
           title="Netflix Originals"
@@ -31,7 +33,7 @@ export default function page() {
         />
         <Rowapi title="Animation" fetchUrl={requests.fetchAnime} />
         <Rowapi title="Action Movies" fetchUrl={requests.fetchActionMovies} />
-        <Navbar />
+        <Footer />
         {/* <Rowapi /> */}
       </div>
     </>
