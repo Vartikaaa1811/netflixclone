@@ -4,7 +4,8 @@ import React from "react";
 import requests from "../../app/lib/requests";
 import Banner from "../../components/Banner/Banner";
 import Rowapi from "../../components/Rowapi/Rowapi";
-import Navbar from "../../components/Navbar/Navbar"
+import Navbar from "../../components/Navbar/Navbar";
+
 
 export default function page() {
   return (
@@ -18,14 +19,18 @@ export default function page() {
         />
         <Rowapi title="Trending Now" fetchUrl={requests.fetchTrending} />
         <Rowapi title="Top Rated" fetchUrl={requests.fetchTopRated} />
-        <Rowapi title="Action Movies" fetchUrl={requests.fetchActionMovies} />
+
         <Rowapi title="Comedy Movies" fetchUrl={requests.fetchComedyMovies} />
         <Rowapi
           title="Romantic Movies"
           fetchUrl={requests.fetchRomanceMovies}
         />
-        <Rowapi title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
-        <Rowapi title="Documentaries" fetchUrl={requests.fetchDocumentaries} />
+        <Rowapi
+          title="TV Sci-Fi And Horror"
+          fetchUrl={requests.fetchHorrorMovies}
+        />
+        <Rowapi title="Animation" fetchUrl={requests.fetchAnime} />
+        <Rowapi title="Action Movies" fetchUrl={requests.fetchActionMovies} />
         <Navbar />
         {/* <Rowapi /> */}
       </div>

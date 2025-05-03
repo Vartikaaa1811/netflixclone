@@ -5,9 +5,12 @@ import Form from "next/form";
 import Image from "next/image";
 import Rowapi from "../../components/Rowapi/Rowapi";
 import requests from "../../app/lib/requests";
+import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
+import CloseIcon from "@mui/icons-material/Close";
+import AddIcon from "@mui/icons-material/Add";
 
 const page = () => {
-  const [showText, setShowText] = useState(true);
+  const [showText, setShowText] = useState(false);
 
   return (
     <>
@@ -56,7 +59,7 @@ const page = () => {
               className="bg-red-500 hover:bg-red-700 transition px-6 py-3 text-white font-semibold rounded w-full sm:w-auto"
               type="submit"
             >
-              Get Started {">"}
+              Get Started <ArrowForwardIosOutlinedIcon />
             </button>
           </Form>
         </div>
@@ -179,10 +182,13 @@ const page = () => {
         </div>
         <div className="flex flex-col gap-4 font-bold max-w-7xl mx-auto">
           <div className="border px-2 py-2 bg-black-400 rounded border-gray-800 ">
-            <button onClick={() => setShowText(!showText)}>
-              <p className="inline p-4">What is Netflix? </p>
-              {showText ? "+" : "-"}
-            </button>
+            <div>
+              <button onClick={() => setShowText(!showText)}>
+                <p className="inline p-4">What is Netflix? </p>
+                {/* {showText ? "+" : "-"} */}
+                {showText ? <CloseIcon /> : <AddIcon />}
+              </button>
+            </div>
 
             {showText && (
               <p className="border px-2 py-2 text-sm font-normal bg-grey-400 rounded border-gray-800 ">
@@ -197,16 +203,29 @@ const page = () => {
           </div>
 
           <div className="border px-2 py-2 rounded border-gray-500">
+          <button onClick={() => setShowText(!showText)}>
             How much does Netflix cost?
+            {showText ? <CloseIcon /> : <AddIcon />}
+
+            </button>
+            {showText && (
             <p className="border px-2 py-2 bg-grey-400 rounded border-gray-800 hover:bg-gray-600">
               Watch Netflix on your smartphone, tablet, Smart TV, laptop, or
               streaming device, all for one fixed monthly fee. Plans range from
               USD 8.99 to USD 16.99 a month. No extra costs, no contracts.
             </p>
+            )}
           </div>
+            
 
           <div className="border px-2 py-2 rounded border-gray-500">
-            Where can I watch?
+          <button onClick={() => setShowText(!showText)}>
+
+            Where can I watch? 
+            {showText ? <CloseIcon /> : <AddIcon />}
+
+            </button>
+            {showText && (
             <p className="border px-2 py-2 bg-grey-400 rounded border-gray-800 hover:bg-gray-600">
               Watch anywhere, anytime. Sign in with your Netflix account to
               watch instantly on the web at netflix.com from your personal
@@ -217,29 +236,48 @@ const page = () => {
               downloads to watch while you're on the go and without an internet
               connection. Take Netflix with you anywhere.
             </p>
+            )}
           </div>
 
           <div className="border px-2 py-2 rounded border-gray-500">
-            How do I cancel?
+          <button onClick={() => setShowText(!showText)}>
+
+            How do I cancel? 
+            {showText ? <CloseIcon /> : <AddIcon />}
+            </button>
+            {showText && (
             <p className="border px-2 py-2 bg-grey-400 rounded border-gray-800 hover:bg-gray-600">
-              {" "}
+              
               Netflix is flexible. There are no pesky contracts and no
               commitments. You can easily cancel your account online in two
               clicks. There are no cancellation fees - start or stop your
               account anytime.
             </p>
+            )}
           </div>
           <div className="border px-2 py-2 rounded border-gray-500">
+          <button onClick={() => setShowText(!showText)}>
+
             What can I watch on Netflix?
+            {showText ? <CloseIcon /> : <AddIcon />}
+            </button>
+            {showText && (
             <p className="border px-2 py-2 bg-grey-400 rounded border-gray-800 hover:bg-gray-600">
-              {" "}
+              
               Netflix has an extensive library of feature films, documentaries,
               TV shows, anime, award-winning Netflix originals, and more. Watch
               as much as you want, anytime you want.
             </p>
+            )}
           </div>
           <div className="border px-2 py-2 rounded border-gray-500">
+          <button onClick={() => setShowText(!showText)}>
+
             Is Netflix good for kids?
+            {showText ? <CloseIcon /> : <AddIcon />}
+
+            </button>
+            {showText && (
             <p className="border px-2 py-2 bg-grey-400 rounded border-gray-800 hover:bg-gray-600">
               The Netflix Kids experience is included in your membership to give
               parents control while kids enjoy family-friendly TV shows and
@@ -248,6 +286,7 @@ const page = () => {
               content kids can watch and block specific titles you don't want
               kids to see.
             </p>
+            )}
           </div>
         </div>
       </div>
@@ -267,7 +306,7 @@ const page = () => {
             className="bg-red-600 hover:bg-red-700 transition px-6 py-3 text-white font-semibold rounded w-full sm:w-auto"
             type="submit"
           >
-            Get Started {">"}
+            Get Started <ArrowForwardIosOutlinedIcon />
           </button>
         </Form>
         <hr className="my-8 border-b border-gray-600 w-full" />

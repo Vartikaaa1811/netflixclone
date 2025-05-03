@@ -3,6 +3,8 @@ import React, { useState, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import axios from "../../app/lib/axios";
 import CloseIcon from '@mui/icons-material/Close';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+
 //import requests from "../../app/lib/requests";
 
 export default function Rowapi({ title, fetchUrl, isLargeRow }) {
@@ -100,7 +102,7 @@ export default function Rowapi({ title, fetchUrl, isLargeRow }) {
 
                   <div className="mt-4 flex gap-4">
                     <button className="bg-white text-black font-bold px-4 py-2 rounded hover:bg-gray-200">
-                      ▶ Play
+                    <PlayArrowIcon /> Play
                     </button>
                     <button className="bg-gray-700 text-white font-bold px-4 py-2 rounded hover:bg-gray-600">
                       + My List

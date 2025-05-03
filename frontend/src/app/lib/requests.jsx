@@ -9,8 +9,9 @@ const requests = {
   fetchActionMovies: `/discover/movie?api_key=${API_KEY}&with_genres=28`,
   fetchComedyMovies: `/discover/movie?api_key=${API_KEY}&with_genres=35`,
   fetchHorrorMovies: `/discover/movie?api_key=${API_KEY}&with_genres=27`,
-  fetchRomanceMovies: `/discover/movie?api_key=${API_KEY}&with_genres=10749`,
-  fetchDocumentaries: `/discover/movie?api_key=${API_KEY}&with_genres=99`,
+  fetchRomanceMovies: `/discover/movie?api_key=${API_KEY}&with_genres=10749`, //done
+  fetchAnime: `/discover/movie?api_key=${API_KEY}&with_genres=16`, //change
 };
 
 export default requests;
+// https://api.themoviedb.org/3/genre/movie/list?api_key=92fb9c277ec391c570fbb7382608dc4a&language=en-US
