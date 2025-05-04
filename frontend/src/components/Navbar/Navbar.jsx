@@ -50,7 +50,7 @@ export default function Navbar() {
           <span className="hidden sm:inline">Children</span>
           <Bell className="w-5 h-5 cursor-pointer" />
           <img
-            src="https://occ-0-3752-64.1.nflxso.net/dnm/api/v6/5s3TKd5XQbU2cz9vTZh_1Q/webp/7232160/9e634cd2-5d3d-4769-989f-245c50e1d16b.webp"
+            src="/images/navIcon.jpg"
             alt="Profile"
             className="w-8 h-8 rounded cursor-pointer"
           />

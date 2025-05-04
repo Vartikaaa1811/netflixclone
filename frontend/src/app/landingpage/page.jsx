@@ -9,6 +9,7 @@ import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutl
 import CloseIcon from "@mui/icons-material/Close";
 import AddIcon from "@mui/icons-material/Add";
 import Footer from "../../components/Footer/Footer";
+import Link from "next/link";
 
 const page = () => {
   const [show1, setShow1] = useState(false);
@@ -42,9 +43,11 @@ const page = () => {
               />
             </div>
             <div>
+              <Link href="/homepage">
               <button className=" absolute top-12 text-xl right-14 bg-red-600 px-4 py-2 rounded">
                 Watch
               </button>
+              </Link>
             </div>
 
             <h1 className="text-5xl md:text-6xl font-extrabold mb-5">
