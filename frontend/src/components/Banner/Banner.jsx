@@ -48,7 +48,9 @@ export default function Banner() {
             {movie?.overview}
           </p>
         </div>
+        <div className="absolute bottom-0 w-full h-25 bg-gradient-to-b from-transparent to-gray-950"></div>
       </div>
+      
     </>
   );
 }

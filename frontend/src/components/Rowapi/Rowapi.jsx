@@ -71,6 +71,7 @@ export default function Rowapi({ title, fetchUrl, isLargeRow }) {
 
         {selectedMovie && (
           <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+            
             <div className="relative bg-zinc-900 rounded-xl overflow-hidden max-w-4xl w-[90%]">
               {/* Close Button */}
               <button
@@ -81,18 +82,18 @@ export default function Rowapi({ title, fetchUrl, isLargeRow }) {
               </button>
 
               {/* Movie Image */}
-              <div className="relative h-[75vh]">
+              <div className="relative ">
                 <img
                   src={`https://image.tmdb.org/t/p/original/${
                     selectedMovie.backdrop_path || selectedMovie.poster_path
                   }`}
                   alt={selectedMovie.title || selectedMovie.name}
-                  className="w-full max-h-[450px] object-cover object-top rounded-t-xl"
+                  className="w-full  object-cover object-top rounded-t-xl"
                   isLargeRow
                 />
 
-                {/* Info */}
-                <div className="absolute top-1/3 bottom-0 left-3 w-full bg-gradient-to-t from-black via-transparent to-transparent p-6 text-white">
+                {/* Info top-1/3 */}
+                <div className="absolute top-[50%] bottom-0 left-3 w-full bg-gradient-to-t  p-6 text-white">
                   <h2 className="text-3xl font-bold mb-2">
                     {selectedMovie.title || selectedMovie.name}
                   </h2>
@@ -109,10 +110,13 @@ export default function Rowapi({ title, fetchUrl, isLargeRow }) {
                     </button>
                   </div>
                 </div>
+
               </div>
+              
             </div>
           </div>
         )}
+        
       </div>
     </>
   );

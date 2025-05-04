@@ -50,7 +50,7 @@ export default Gitexamplenav;
                 streaming device, all for one fixed monthly fee. Plans range
                 from USD 8.99 to USD 16.99 a month. No extra costs, no
                 contracts.
-              </p>
+              </p> 
             )}
           </div>
 
@@ -118,3 +118,7 @@ export default Gitexamplenav;
           </div>
         </div>
       </div>
+
+
+
+

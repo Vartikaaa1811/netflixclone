@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head> 
-        <link rel="icon" href="/images/netflix-icon.png" />
+        <link rel="icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico" />
         </head>
       <body>
         {children}
@@ -19,3 +19,4 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+///images/netflix-icon.png

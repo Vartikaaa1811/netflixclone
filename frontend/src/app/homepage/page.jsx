@@ -14,6 +14,7 @@ export default function page() {
       <div className="bg-gray-950">
         <Navbar />
         <Banner />
+        
         <Rowapi
           title="Netflix Originals"
           fetchUrl={requests.fetchNetflixOriginals}
